@@ -1,10 +1,11 @@
 import React from 'react';
+import { Weather } from '../../components';
 
 
 import './Home.scss';
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='app__Home'><Weather/></div>
   )
 }
 

@@ -4,7 +4,7 @@ import React from 'react';
 import './Movies.scss';
 const Movies = () => {
   return (
-    <div>Movies</div>
+    <div className='app__movies'>Movies</div>
   )
 }
 

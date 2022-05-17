@@ -9,8 +9,9 @@ import "./App.scss";
 const App = () => {
   return (
     <div className="app">
-      <Navbar />
+      <div className="nav"><Navbar /></div>
       
+         <div className="containers">
         <Routes>
           <Route exact path="/" element={<Home />} />
 
@@ -22,7 +23,7 @@ const App = () => {
 
           <Route path="/smart" element={<Smart />} />
         </Routes>
-      
+      </div>
     </div>
   );
 };

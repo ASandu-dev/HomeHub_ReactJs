@@ -9,8 +9,8 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
-  let activeClassName = 'app__navbar-links active';
-  let linkClassName = 'app__navbar-links';
+  let activeClassName = 'app__flex p-text active-link';
+  let linkClassName = 'app__flex p-text';
 
   return (
     <nav className="app__navbar ">
@@ -22,35 +22,35 @@ const Navbar = () => {
       <ul className="app__navbar-links">
         
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
               to={"/"}
               className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Home</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
               to={"/Movies"}
               className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Movies</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
               to={"/Pictures"}
               className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Pictures</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
               to={"/Settings"}
               className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Settings</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
               to={"/Smart"}
               className={({ isActive }) =>
@@ -63,45 +63,46 @@ const Navbar = () => {
         <HiMenuAlt4 onClick={() => setToggle(true)} />
         {toggle && (
           <motion.div
-            whileInView={{ x: [300, 0] }}
+            
+            whileInView={{ x: [-300, -100] }}
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
             <ul className="app__navbar-links">
         
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
-              to={'/'}
-              style={({ isActive }) =>
+              to={"/"}
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Home</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
-              to={'/Movies'}
-              style={({ isActive }) =>
+              to={"/Movies"}
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Movies</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
-              to={'/Pictures'}
-              style={({ isActive }) =>
+              to={"/Pictures"}
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Pictures</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
-              to={'/Settings'}
-              style={({ isActive }) =>
+              to={"/Settings"}
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Settings</NavLink>            
           </li>
           <li className="app__flex p-text">
-            <div />
+            
             <NavLink
-              to={'/Smart'}
-              style={({ isActive }) =>
+              to={"/Smart"}
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Smart</NavLink>            
           </li>
         

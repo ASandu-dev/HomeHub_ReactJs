@@ -7,19 +7,20 @@
   align-items: center;
   flex-direction: column;
 
-  background: rgba(var(--hilightBG), 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(#3f5986, 0.18);
+  background-color: var(--hilightBG);
   position: fixed;
   z-index: 2;
+
+  
 }
 
 .app__navbar-logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  width: 10%;
+  padding-top: 2rem;
+  background-color: var(--hilightBG);
 
   img {
     width: 100px;
@@ -30,16 +31,23 @@
       height: 40px;
     }
   }
+  @media screen and (max-width: 900px) {
+    display: none;
+    
+}
+  @media screen and (max-width: 1000px) {
+    display: none;
+    
+}
 }
 
 .app__navbar-links{
     flex: 2;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    background-color: #000;
 
     li{
         margin: 1rem 0;
@@ -47,18 +55,9 @@
         flex-direction: column;
         width: 100%;
         align-content: center;
-        &:active{
-            border-left: aqua 2px solid;
-        }
-
-        div{
-            width: 5px;
-            height: 5px;
-            background: transparent;
-            border-radius: 50%;
-
-            margin-bottom: 5px;
-        }
+        
+        
+        
         a{
             color: var(--text);
             text-decoration: none;
@@ -66,9 +65,12 @@
             text-transform: uppercase;
             font-weight: 500;
             font-size: 1rem;
+            width: 100%;
+            padding: 1rem 0;
 
             transition: all 0.3s ease-in-out;
-
+            
+            
             &:hover{
                 color: var(--highLightText);
             }
@@ -86,11 +88,22 @@
     }
 }
 
+.active-link{
+    border-left: var(--highLightText) 4px solid;
+    
+    background-color: var(--selectedBG);
+}
+
+
+
 .app__navbar-menu{
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     position: relative;
+    margin: 0 0.5rem;
+
+    top: 2rem;
 
     display: flex;
     justify-content: center;
@@ -98,8 +111,8 @@
     background: var(--highLightText);
 
     svg{
-        width: 70%;
-        height: 70%;
+        width: 50%;
+        height: 50%;
         color: var(--text );
 
     }
@@ -146,6 +159,10 @@
                 
             }
         }
+        
+    }
+    @media screen and (max-width: 900px) {
+        
         
     }
     @media screen and (min-width: 900px) {
