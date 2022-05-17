@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { images } from "../../constants";
 import "./Navbar.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,35 +25,35 @@ const Navbar = () => {
             <div />
             <NavLink
               to={"/"}
-              style={({ isActive }) =>
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Home</NavLink>            
           </li>
           <li className="app__flex p-text">
             <div />
             <NavLink
               to={"/Movies"}
-              style={({ isActive }) =>
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Movies</NavLink>            
           </li>
           <li className="app__flex p-text">
             <div />
             <NavLink
               to={"/Pictures"}
-              style={({ isActive }) =>
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Pictures</NavLink>            
           </li>
           <li className="app__flex p-text">
             <div />
             <NavLink
               to={"/Settings"}
-              style={({ isActive }) =>
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Settings</NavLink>            
           </li>
           <li className="app__flex p-text">
             <div />
             <NavLink
               to={"/Smart"}
-              style={({ isActive }) =>
+              className={({ isActive }) =>
               isActive ? activeClassName : linkClassName}>Smart</NavLink>            
           </li>
         

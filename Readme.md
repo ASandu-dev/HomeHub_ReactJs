@@ -6,6 +6,13 @@
 
 - [React.js](https://reactjs.org/)
 - [SASS](https://sass-lang.com/)
+- [Sanity/client](https://www.sanity.io/)
+- [Sanity/image-url](https://www.sanity.io/)
+- [Framer-Motion]
+- [Node-Sass]
+- [React-Icons]
+- [React-Router]
+- [React-NavLinks]
 
 ## Available Scripts
 
