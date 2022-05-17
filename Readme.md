@@ -1,4 +1,4 @@
-# Sofa-Movie App
+# HomeHub App
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
