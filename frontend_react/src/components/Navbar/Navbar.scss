@@ -1,0 +1,155 @@
+.app__navbar {
+  width: 10%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  background: rgba(var(--hilightBG), 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(#3f5986, 0.18);
+  position: fixed;
+  z-index: 2;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  img {
+    width: 100px;
+    height: 30px;
+
+    @media screen and (min-width: 2000px) {
+      width: 180px;
+      height: 40px;
+    }
+  }
+}
+
+.app__navbar-links{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+
+    li{
+        margin: 1rem 0;
+        cursor: pointer;
+        flex-direction: column;
+        width: 100%;
+        align-content: center;
+        &:active{
+            border-left: aqua 2px solid;
+        }
+
+        div{
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border-radius: 50%;
+
+            margin-bottom: 5px;
+        }
+        a{
+            color: var(--text);
+            text-decoration: none;
+            flex-direction: column;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1rem;
+
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                color: var(--highLightText);
+            }
+        }
+        &:hover{
+            div{
+                background-color: var(--highLightText);
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        display: none;
+        
+    }
+}
+
+.app__navbar-menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--highLightText);
+
+    svg{
+        width: 70%;
+        height: 70%;
+        color: var(--text );
+
+    }
+
+    div{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        padding: 1rem;
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        background-color: var(--bgColor);
+
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+        svg{
+            width: 35px;
+        height: 35px;
+        color: var(--text );
+        margin: 0.5rem 1rem;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            li{
+                margin: 1rem;
+
+                
+            }
+        }
+        
+    }
+    @media screen and (min-width: 900px) {
+        display: none;
+        
+    }
+}
