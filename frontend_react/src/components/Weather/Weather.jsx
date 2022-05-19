@@ -1,5 +1,5 @@
-
 import React, { useState, useEffect } from "react";
+import CardHeaders from "../CardHeaders/CardHeaders";
 
 import "./Weather.scss";
 
@@ -11,36 +11,38 @@ const Weather = () => {
 
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-
-    fetchData();
-    // eslint-disable-next-line
-  }, []);
-
   const fetchData = async () => {
-
     const response = await fetch(url).then((res) => res.json());
 
     setData(response);
   };
 
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line
+  }, []);
+
+  if (data.length === 0) {
+    return <h1> loading </h1>;
+  }
   console.log(data, "asa");
 
-  if (data.length === []) {
-    return <h2>Loading</h2>;
-  }
-  
+  const cardTitle = "Weather";
   return (
-    
-    <div className="app__Weather app__flex">
-      <p>Weather in {city}</p>
-      <div className="wrapper">
-        <div className="icon">
-          <img src={data.current.condition.icon} alt="icon" />
-        </div>
-        <div className="weather_data">
-          <h1>{data.current.temp_c}°C</h1>
-          <p>{data.current.condition.text}</p>
+    <div className="app__Weather">
+      <div className="header">
+        <CardHeaders title={cardTitle} />
+      </div>
+      <div className="content">
+        <p>Weather in {city}</p>
+        <div className="wrapper">
+          <div className="icon">
+            <img src={data.current.condition.icon} alt="icon" />
+          </div>
+          <div className="weather_data">
+            <h1>{data.current.temp_c}°C</h1>
+            <p>{data.current.condition.text}</p>
+          </div>
         </div>
       </div>
     </div>
