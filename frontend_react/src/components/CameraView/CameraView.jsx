@@ -8,7 +8,7 @@ const CameraView = () => {
   return (
     <div className="cameraCard">
       <div className="header">
-        <CardHeaders title={cardTitle}/>
+        <CardHeaders title="Camera"/>
       </div>
       <div className="content">
         <div className="embed-responsive embed-responsive-16by9 cameraView ">

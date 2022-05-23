@@ -1,4 +1,15 @@
-.app__movies{
-    background-color: rgb(255, 238, 0);
-    height: 90vh;
+.app__movies {
+  height: 90vh;
+  padding: 2rem;
+  .wrapper {
+    background-color: var(--hilightBG);
+    border-radius: 15px;
+    .movie-app{
+        .row {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+    }
+    
+  }
 }

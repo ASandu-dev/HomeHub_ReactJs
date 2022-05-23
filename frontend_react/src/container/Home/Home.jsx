@@ -6,8 +6,8 @@ import './Home.scss';
 const Home = () => {
   return (
     <div className='app__Home'>
-      <CameraView/>
-      <Weather/>
+      <CameraView />
+      <Weather />
       </div>
   )
 }

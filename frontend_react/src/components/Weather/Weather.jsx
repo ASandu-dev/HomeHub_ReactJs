@@ -27,11 +27,11 @@ const Weather = () => {
   }
   console.log(data, "asa");
 
-  const cardTitle = "Weather";
+  
   return (
     <div className="app__Weather">
       <div className="header">
-        <CardHeaders title={cardTitle} />
+        <CardHeaders title="Weather" />
       </div>
       <div className="content">
         <p>Weather in {city}</p>
