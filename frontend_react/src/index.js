@@ -4,7 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import "./index.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/scss/bootstrap.scss';
+import "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
 
 
 

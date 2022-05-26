@@ -2,7 +2,10 @@ import React from 'react';
 
 import './Pictures.scss';
 
+
 const Pictures = () => {
+  
+
   return (
     <div>Pictures</div>
   )

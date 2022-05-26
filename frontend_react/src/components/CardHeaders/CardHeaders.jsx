@@ -8,7 +8,7 @@ import "./CardHeaders.scss";
 
 const CardHeaders = (props) => {
   return (
-    <div class="header">
+    <div class="header ">
       <h1>{props.title}</h1>
       <FontAwesomeIcon icon={faGear} className='icons' />
     </div>
