@@ -4,12 +4,23 @@
   .wrapper {
     background-color: var(--hilightBG);
     border-radius: 15px;
-    .movie-app{
-        .row {
-      overflow-x: auto;
-      flex-wrap: nowrap;
+    .movie-app {
+      .row {
+        display: flex;
+        gap: 12px;
+        justify-content: start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        .movie{
+          width: 350px;
+
+          img{
+            &:hover{
+              scale: 1.5;
+            }
+          }
+        }
+      }
     }
-    }
-    
   }
 }

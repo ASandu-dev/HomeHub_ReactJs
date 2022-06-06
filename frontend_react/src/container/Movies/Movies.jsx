@@ -27,7 +27,7 @@ const Movies = () => {
     <div className="app__movies">
       <div className="wrapper container-fluid h-100 pt-4 pb-4">
         <CardHeaders title="Movies" />
-        <div className="d-flex row w-25 ms-auto mt-2 mb-2">
+        <div className="d-flex row ms-auto mt-2 mb-2">
           <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
         </div>
         <div className="container-fluid movie-app">
